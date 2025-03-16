@@ -1,0 +1,14 @@
+<div class="mx-auto md:w-2/3 w-full">
+  <h1 class="text-4xl text-gray-900 font-bold"> Create Account </h1>
+  <%= form_with url: registrations_path, model: @user do |f| %>
+    <%= f.email_field :email_address, class: "block w-full shadow-sm border border-gray-900 text-gray-900 px-3 py-2 rounded-lg my-5",
+      placeholder: "Enter your email" %>
+    <%= f.password_field :password, class: "block w-full shadow-sm border border-gray-900 text-gray-900 px-3 py-2 rounded-lg my-5",
+      placeholder: "Enter a password" %>
+
+    <div class="flex items-center gap-4">
+      <%= f.submit "Sign up", class: "px-3 py-2 rounded-lg bg-blue-500 text-blue-50 cursor-pointer hover:bg-blue-600 transition duration-250" %>
+      <%= link_to "Log in", new_session_path, class: "px-3 py-2 rounded-lg border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-gray-50 transition duration-250" %>
+    </div>
+  <% end %>
+</div>
